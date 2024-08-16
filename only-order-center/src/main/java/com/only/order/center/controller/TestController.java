@@ -53,9 +53,9 @@ public class TestController {
 
     @GetMapping("/product/{id}")
     public String product(@PathVariable("id") Integer id) {
-//        String product = productCenterFeignApi.product(id);
-        String product1 = onlyProductCenterFeignApi.product(id);
-        return product1;
+        String product = productCenterFeignApi.product(id);
+//        String product1 = onlyProductCenterFeignApi.product(id);
+        return product;
     }
 
     @GetMapping("/isNewBusi")
